@@ -20,7 +20,7 @@ declare -a tor_exitpolicy_rules=("accept *:119" "accept *:6660-6667")
 torrc=/etc/tor/torrc
 
 # --- UFW Settings (no-op if UFW is not installed) --- #
-ufw_reset=true
+ufw_reset=false
 declare -a ufw_reset_newrules=("ufw allow ssh" "ufw allow ftp")
 
 # --- Logging Settings --- #
