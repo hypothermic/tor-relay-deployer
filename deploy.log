@@ -1,0 +1,69 @@
+
+======================================
+== Automatic Tor Relay Deployer log ==
+==  2018-05-17 20:14:36 1526580876  ==
+======================================
+
+[INFO] Configuring UFW...
+
+[WARN] Resetting UFW rules except for: ufw allow ssh ufw allow ftp
+
+./deploy.sh: line 114: Resetting: command not found
+Rules updated
+Rules updated (v6)
+Rules updated
+Rules updated (v6)
+Rule added
+Rule added (v6)
+Rule added
+Rule added (v6)
+[INFO] Adding debian repositories...
+
+./deploy.sh: line 135: deb: command not found
+./deploy.sh: line 136: deb-src: command not found
+Hit:1 http://repo.steampowered.com/steam precise InRelease
+Hit:2 http://ppa.launchpad.net/wireguard/wireguard/ubuntu bionic InRelease
+Hit:3 http://nl.archive.ubuntu.com/ubuntu bionic InRelease
+Hit:4 http://packages.microsoft.com/repos/vscode stable InRelease
+Hit:5 http://nl.archive.ubuntu.com/ubuntu bionic-updates InRelease
+Hit:6 http://nl.archive.ubuntu.com/ubuntu bionic-backports InRelease
+Hit:7 https://repo.skype.com/deb stable InRelease
+Get:8 http://security.ubuntu.com/ubuntu bionic-security InRelease [83,2 kB]
+Fetched 83,2 kB in 1s (75,5 kB/s)
+Reading package lists...
+[INFO] Installing Tor...
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  tor-geoipdb
+Suggested packages:
+  mixmaster torbrowser-launcher socat apparmor-utils obfs4proxy
+The following NEW packages will be installed:
+  tor tor-geoipdb
+0 upgraded, 2 newly installed, 0 to remove and 6 not upgraded.
+Need to get 0 B/2052 kB of archives.
+After this operation, 10,8 MB of additional disk space will be used.
+Selecting previously unselected package tor.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 239602 files and directories currently installed.)
+Preparing to unpack .../tor_0.3.2.10-1_amd64.deb ...
+Unpacking tor (0.3.2.10-1) ...
+Selecting previously unselected package tor-geoipdb.
+Preparing to unpack .../tor-geoipdb_0.3.2.10-1_all.deb ...
+Unpacking tor-geoipdb (0.3.2.10-1) ...
+Processing triggers for ureadahead (0.100.0-20) ...
+Setting up tor (0.3.2.10-1) ...
+Something or somebody made /var/lib/tor disappear.
+Creating one for you again.
+Something or somebody made /var/log/tor disappear.
+Creating one for you again.
+Created symlink /etc/systemd/system/multi-user.target.wants/tor.service → /lib/systemd/system/tor.service.
+Setting up tor-geoipdb (0.3.2.10-1) ...
+Processing triggers for systemd (237-3ubuntu10) ...
+Processing triggers for man-db (2.8.3-2) ...
+Processing triggers for ureadahead (0.100.0-20) ...
+[INFO] Overwriting torrc...
+
+[INFO] Restarting tor service...
+
